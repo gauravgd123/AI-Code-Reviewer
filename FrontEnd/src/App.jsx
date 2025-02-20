@@ -7,6 +7,7 @@ import Markdown from "react-markdown"
 import rehypehighlight from "rehype-highlight"
 import "highlight.js/styles/github.css"
 import './App.css'
+const backendUrl = import.meta.env.VITE_API_URL;
 
 function App() {
   const [review, setReview] = useState("");
@@ -18,8 +19,8 @@ function App() {
   },[])
 
   const reviewCode = async ()=>{
-    const response = await axios.post("http://localhost:3000/ai/get-review", { code })
-
+    //const response = await axios.post("http://localhost:3000/ai/get-review", { code })
+    const response = await axios.post(`${backendUrl}/ai/get-review`, { code });
     setReview(response.data);
     
   }
