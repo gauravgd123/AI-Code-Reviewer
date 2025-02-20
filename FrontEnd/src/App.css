@@ -1,0 +1,150 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left, 
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left {
+  background-color: #000000;
+  position: relative;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+
+main .right {
+  padding: 1rem 2rem;
+  background-color: #343434;
+  font-size: 1rem;  /* Reduced from 1.5rem */
+  overflow: auto;
+  color: #ffffff;
+}
+
+/* Style overrides to ensure all text is visible */
+.right * {
+  color: #ffffff !important; /* Force all text to be white */
+}
+
+.right pre {
+  background-color: #242424;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.right code {
+  background-color: #242424;
+  color: #e0e0e0 !important;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+
+.right p {
+  margin: 0.8rem 0;
+  line-height: 1.5;
+}
+
+.right h1,
+.right h2,
+.right h3,
+.right h4,
+.right h5,
+.right h6 {
+  margin: 1.2rem 0 0.8rem 0;
+}
+
+.right h1 { font-size: 1.5rem; }
+.right h2 { font-size: 1.3rem; }
+.right h3 { font-size: 1.1rem; }
+
+.right ul,
+.right ol {
+  margin: 0.8rem 0;
+  padding-left: 1.5rem;
+}
+
+.right li {
+  margin: 0.4rem 0;
+}
+
+.right a {
+  color: #b3d4ff !important; /* Lighter blue for better visibility */
+  text-decoration: none;
+}
+
+.right a:hover {
+  text-decoration: underline;
+}
+
+.right p code {
+  color: #e0e0e0 !important;
+  background-color: #242424;
+}
+
+.right blockquote {
+  border-left: 4px solid #666;
+  margin: 0.8rem 0;
+  padding-left: 1rem;
+  color: #e0e0e0 !important;
+}
+
+/* Override any syntax highlighting colors */
+.right .hljs,
+.right .hljs-keyword,
+.right .hljs-string,
+.right .hljs-number,
+.right .hljs-built_in,
+.right .hljs-literal {
+  color: #e0e0e0 !important;
+}
+
+ /* .left .code::-webkit-scrollbar,
+.right::-webkit-scrollbar {
+  width: 0;  /* width for vertical scrollbar 
+  height: 0; height for horizontal scrollbar 
+}  */
